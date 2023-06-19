@@ -1,0 +1,35 @@
+.panel {
+    background-color: white;
+}
+
+.panel:hover {
+    padding: 0.5rem;
+    transform: scale(1.1);
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+.price {
+    font-weight: bold;
+    display: inline;
+}
+
+.measurement {
+    display: inline;
+    font-style: italic;
+}
+
+.add-to-cart-button {
+    padding: 0.5rem;
+}
+
+@media (max-width: 650px) {
+    img {
+        width: 100px;
+        height: 100px;
+    }
+}

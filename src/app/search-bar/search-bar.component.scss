@@ -1,0 +1,18 @@
+.search-bar {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.search-bar>* {
+    margin: 0.25rem;
+}
+
+input[type="text"] {
+    width: 70%;
+}
+
+img {
+    display: inline-table;
+}

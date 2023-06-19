@@ -1,10 +1,15 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { ProductsModule } from './products/products.module';
+import { SearchBarComponent } from './search-bar/search-bar.component';
+import { DebugElement } from '@angular/core';
+import { By } from '@angular/platform-browser';
+import { PRODUCTS } from './products-default';
 
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
-    imports: [RouterTestingModule],
+    imports: [RouterTestingModule, SearchBarComponent, ProductsModule],
     declarations: [AppComponent]
   }));
 
@@ -14,16 +19,18 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'delivery-simulator'`, () => {
+  it('should increment items in cart by clicking Add to cart in one product', () => {
+    localStorage.removeItem('cart');
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('delivery-simulator');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
+    let component: AppComponent = fixture.componentInstance;
+    component.products = PRODUCTS;
     fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('delivery-simulator app is running!');
+    const compiled: DebugElement = fixture.debugElement;
+    const buttonDebug = compiled.query(By.css(".add-to-cart-button"));
+    const button = buttonDebug.nativeElement;
+    button.click();
+    fixture.detectChanges();
+    const items = compiled.query(By.css(".search-bar button span")).nativeElement;
+    expect(items.textContent).toEqual('1');
   });
 });

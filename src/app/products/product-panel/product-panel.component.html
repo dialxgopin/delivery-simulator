@@ -1,0 +1,13 @@
+<div class="panel">
+    <img [src]="product.imageLocation" />
+    <div class="price">
+        <span>$</span><span>{{product.price}}</span>
+        &nbsp;
+    </div>
+    <div class="measurement">{{product.measurement}}</div>
+    <div>
+        <span>{{product.name}}</span>
+        &nbsp;
+        <button class="add-to-cart-button" (click)="onAddToCart()">Add to cart</button>
+    </div>
+</div>
