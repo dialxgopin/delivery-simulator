@@ -1,0 +1,21 @@
+.list-item {
+    display: flex;
+    flex-direction: row;
+    padding: 0.625rem;
+}
+
+img {
+    width: 11.25rem;
+    height: 11.25rem;
+    padding-right: 0.625rem;
+}
+
+.price {
+    font-weight: bold;
+    display: inline;
+}
+
+.measurement {
+    display: inline;
+    font-style: italic;
+}

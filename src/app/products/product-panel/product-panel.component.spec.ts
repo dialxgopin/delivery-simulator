@@ -2,12 +2,12 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProductPanelComponent } from './product-panel.component';
 import { PRODUCTS } from 'src/app/products-default';
-import { ProductPanel } from 'src/app/model/pruduct-panel';
+import { Product } from 'src/app/model/pruduct';
 
 describe('ProductPanelComponent', () => {
   let component: ProductPanelComponent;
   let fixture: ComponentFixture<ProductPanelComponent>;
-  const product: ProductPanel = PRODUCTS[0];
+  const product: Product = PRODUCTS[0];
 
   beforeEach(() => {
     TestBed.configureTestingModule({

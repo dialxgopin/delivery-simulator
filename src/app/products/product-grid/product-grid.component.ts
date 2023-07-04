@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ProductPanel } from 'src/app/model/pruduct-panel';
+import { Product } from 'src/app/model/pruduct';
 import { PRODUCTS } from 'src/app/products-default';
 
 @Component({
@@ -10,6 +10,6 @@ import { PRODUCTS } from 'src/app/products-default';
 export class ProductGridComponent {
 
   @Input()
-  products!: ProductPanel[];
+  products!: Product[];
   
 }

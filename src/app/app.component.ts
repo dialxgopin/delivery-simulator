@@ -1,7 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
-import { ProductGridComponent } from './products/product-grid/product-grid.component';
-import { ProductPanel } from './model/pruduct-panel';
-import { PRODUCTS } from './products-default';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +6,4 @@ import { PRODUCTS } from './products-default';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  products: ProductPanel[] = PRODUCTS;
 }

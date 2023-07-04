@@ -1,16 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { InboxNotificationComponent } from './inbox-notification/inbox-notification.component';
+import { ShoppingListComponent } from './shopping-list/shopping-list.component';
+import { ProductsModule } from '../products/products.module';
+import { SearchBarComponent } from '../search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
-    InboxNotificationComponent
+    ShoppingListComponent
   ],
   exports: [
-    InboxNotificationComponent
+    ShoppingListComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ProductsModule,
+    SearchBarComponent
   ]
 })
 export class CartModule { }

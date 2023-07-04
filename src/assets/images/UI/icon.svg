@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="32"
+   height="32"
+   viewBox="0 0 8.4666665 8.4666665"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (9c6d41e, 2022-07-14)"
+   sodipodi:docname="deliverySimulatorIcon.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="9.5950659"
+     inkscape:cx="21.677808"
+     inkscape:cy="12.871199"
+     inkscape:window-width="1292"
+     inkscape:window-height="704"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#ffcc00;stroke:#000000;stroke-width:0.25;paint-order:markers fill stroke"
+       id="rect291"
+       width="4.7860441"
+       height="4.0752258"
+       x="3.2769828"
+       y="0.51569599" />
+    <ellipse
+       style="fill:#ff6600;stroke:#000000;stroke-width:0.25;paint-order:markers fill stroke"
+       id="path470"
+       cx="5.969368"
+       cy="6.9951658"
+       rx="1.3788042"
+       ry="1.3788044"
+       transform="rotate(-3.8596963)" />
+    <rect
+       style="fill:#ff6600;stroke:#000000;stroke-width:0.25;paint-order:markers fill stroke"
+       id="rect863"
+       width="1.8575938"
+       height="4.6389999"
+       x="0.74067152"
+       y="0.46847674" />
+    <rect
+       style="fill:#ff6600;stroke:#000000;stroke-width:0.25;paint-order:markers fill stroke"
+       id="rect865"
+       width="3.7980046"
+       height="1.7160964"
+       x="0.72777987"
+       y="5.7298298" />
+  </g>
+</svg>

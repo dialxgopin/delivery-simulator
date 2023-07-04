@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductsModule } from './products/products.module';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+import { CartModule } from './cart/cart.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
     BrowserModule,
     AppRoutingModule,
     SearchBarComponent,
-    ProductsModule
+    ProductsModule,
+    CartModule
   ],
   providers: [],
   bootstrap: [AppComponent]
