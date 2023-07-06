@@ -18,6 +18,7 @@ export class ProductPanelComponent {
   onAddToCart() {
     this.cart = this.addToBag(this.product);
     this.updateQuantity();
+    this.updateSubtotal();
     localStorage.setItem('cart', JSON.stringify(this.cart));
   }
 
@@ -43,5 +44,11 @@ export class ProductPanelComponent {
     let totalProducts: number = 0;
     this.cart.forEach(item => totalProducts += item.quantity);
     this.cartService.updateItems(totalProducts);
+  }
+
+  private updateSubtotal() {
+    this.cartService.updateSubtotal(
+      this.cartService.calculateSubtotal(this.cart)
+    );
   }
 }
