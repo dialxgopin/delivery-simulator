@@ -11,14 +11,14 @@ export class ProductPanelComponent {
 
   @Input()
   product!: Product;
+
   cart: Product[] = [];
 
   constructor(private cartService: CartService) { }
 
   onAddToCart() {
     this.cart = this.addToBag(this.product);
-    this.updateQuantity();
-    this.updateSubtotal();
+    this.updateCalculations();
     localStorage.setItem('cart', JSON.stringify(this.cart));
   }
 
@@ -31,22 +31,10 @@ export class ProductPanelComponent {
     return cart;
   }
 
-  private updateQuantity() {
-    for (const item of this.cart) {
-      if (item.id === this.product.id) {
-        item.quantity++;
-      }
-    }
-    this.updateTotalProducts();
-  }
-
-  private updateTotalProducts() {
-    let totalProducts: number = 0;
-    this.cart.forEach(item => totalProducts += item.quantity);
-    this.cartService.updateItems(totalProducts);
-  }
-
-  private updateSubtotal() {
+  private updateCalculations() {
+    this.product.quantity++;
+    this.cart = this.cartService.updateQuantity(this.product, this.cart);
+    this.cartService.updateTotalProducts(this.cart);
     this.cartService.updateSubtotal(
       this.cartService.calculateSubtotal(this.cart)
     );

@@ -9,7 +9,7 @@ export class CartService {
 
   private itemsSubject = new BehaviorSubject<number>(0);
 
-  private subtotalSubject =  new BehaviorSubject<number>(0);
+  private subtotalSubject = new BehaviorSubject<number>(0);
 
   items$ = this.itemsSubject.asObservable();
 
@@ -33,5 +33,21 @@ export class CartService {
     cart.forEach(item => subtotal += item.price * item.quantity);
     subtotal = parseFloat(subtotal.toFixed(2));
     return subtotal;
+  }
+
+  updateQuantity(product: Product, cart: Product[]) {
+    for (const item of cart) {
+      if (item.id === product.id) {
+        item.quantity = product.quantity;
+        break;
+      }
+    }
+    return cart;
+  }
+
+  updateTotalProducts(cart: Product[]) {
+    let totalProducts: number = 0;
+    cart.forEach(item => totalProducts += item.quantity);
+    this.updateItems(totalProducts);
   }
 }

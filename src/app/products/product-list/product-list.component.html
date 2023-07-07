@@ -9,7 +9,11 @@
             &nbsp;
         </div>
         <div class="measurement">{{product.measurement}}</div>
-        <div>Quantity: {{product.quantity}}</div>
+        <div>Quantity:&nbsp;
+            <button (click)="decrement()">-</button>
+            {{product.quantity}}
+            <button (click)="increment()">+</button>
+        </div>
     </div>
 </div>
 <hr />

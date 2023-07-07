@@ -23,4 +23,8 @@ export class ShoppingListComponent {
       this.cartService.calculateSubtotal(this.cart)
     );
   }
+
+  onCartEvent(cart: Product[]) {
+    this.cart = cart;
+  }
 }
